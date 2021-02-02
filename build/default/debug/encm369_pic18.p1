@@ -2535,66 +2535,66 @@ Version 4.0 HI-TECH Software Intermediate Code
 "47642
 [; ;C:/Program Files/Microchip/MPLABX/v5_45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h: 47642: __asm("TOSU equ 04FFh");
 [; <" TOSU equ 04FFh ;# ">
-"69 encm369_pic18.c
-[; ;encm369_pic18.c: 69: void ClockSetup(void)
+"70 encm369_pic18.c
+[; ;encm369_pic18.c: 70: void ClockSetup(void)
 [v _ClockSetup `(v ~T0 @X0 1 ef ]
-"70
-[; ;encm369_pic18.c: 70: {
+"71
+[; ;encm369_pic18.c: 71: {
 {
 [e :U _ClockSetup ]
 [f ]
-"73
-[; ;encm369_pic18.c: 73: }
+"74
+[; ;encm369_pic18.c: 74: }
 [e :UE 2272 ]
 }
-"88
-[; ;encm369_pic18.c: 88: void GpioSetup(void)
-[v _GpioSetup `(v ~T0 @X0 1 ef ]
 "89
-[; ;encm369_pic18.c: 89: {
+[; ;encm369_pic18.c: 89: void GpioSetup(void)
+[v _GpioSetup `(v ~T0 @X0 1 ef ]
+"90
+[; ;encm369_pic18.c: 90: {
 {
 [e :U _GpioSetup ]
 [f ]
-"90
-[; ;encm369_pic18.c: 90:     ANSELA = 0x00;
-[e = _ANSELA -> -> 0 `i `uc ]
 "91
-[; ;encm369_pic18.c: 91:     TRISA = 0x00;
-[e = _TRISA -> -> 0 `i `uc ]
+[; ;encm369_pic18.c: 91:     ANSELA = 0x00;
+[e = _ANSELA -> -> 0 `i `uc ]
 "92
-[; ;encm369_pic18.c: 92:     LATA = 0x80;
-[e = _LATA -> -> 128 `i `uc ]
+[; ;encm369_pic18.c: 92:     TRISA = 0x00;
+[e = _TRISA -> -> 0 `i `uc ]
 "93
-[; ;encm369_pic18.c: 93: }
+[; ;encm369_pic18.c: 93:     LATA = 0x80;
+[e = _LATA -> -> 128 `i `uc ]
+"94
+[; ;encm369_pic18.c: 94: }
 [e :UE 2273 ]
 }
-"108
-[; ;encm369_pic18.c: 108: void SysTickSetup(void)
-[v _SysTickSetup `(v ~T0 @X0 1 ef ]
 "109
-[; ;encm369_pic18.c: 109: {
+[; ;encm369_pic18.c: 109: void SysTickSetup(void)
+[v _SysTickSetup `(v ~T0 @X0 1 ef ]
+"110
+[; ;encm369_pic18.c: 110: {
 {
 [e :U _SysTickSetup ]
 [f ]
-"110
-[; ;encm369_pic18.c: 110:   G_u32SystemTime1ms = 0;
-[e = _G_u32SystemTime1ms -> -> -> 0 `i `l `ul ]
 "111
-[; ;encm369_pic18.c: 111:   G_u32SystemTime1s = 0;
+[; ;encm369_pic18.c: 111:   G_u32SystemTime1ms = 0;
+[e = _G_u32SystemTime1ms -> -> -> 0 `i `l `ul ]
+"112
+[; ;encm369_pic18.c: 112:   G_u32SystemTime1s = 0;
 [e = _G_u32SystemTime1s -> -> -> 0 `i `l `ul ]
-"113
-[; ;encm369_pic18.c: 113: }
+"114
+[; ;encm369_pic18.c: 114: }
 [e :UE 2274 ]
 }
-"130
-[; ;encm369_pic18.c: 130: void SystemSleep(void)
-[v _SystemSleep `(v ~T0 @X0 1 ef ]
 "131
-[; ;encm369_pic18.c: 131: {
+[; ;encm369_pic18.c: 131: void SystemSleep(void)
+[v _SystemSleep `(v ~T0 @X0 1 ef ]
+"132
+[; ;encm369_pic18.c: 132: {
 {
 [e :U _SystemSleep ]
 [f ]
-"133
-[; ;encm369_pic18.c: 133: }
+"134
+[; ;encm369_pic18.c: 134: }
 [e :UE 2275 ]
 }

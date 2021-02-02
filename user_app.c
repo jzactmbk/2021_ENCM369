@@ -94,8 +94,21 @@ Promises:
 */
 void UserAppRun(void)
 {
-
-
+    u32 u32Counter = (286400); 
+    
+    while (u32Counter > 0)
+    {
+        u32Counter--;
+    }   
+    
+    if (LATA == 0xBF)
+    {
+        LATA = 0x80;//The initial GpioSetup value
+    }
+    else
+    {
+        LATA += 0x01;
+    }
 } /* end UserAppRun */
 
 

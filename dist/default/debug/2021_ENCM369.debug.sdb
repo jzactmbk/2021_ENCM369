@@ -27,13 +27,13 @@
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 C:\Program Files\Microchip\xc8\v2_31\pic\sources\c99\common\Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-"69 C:\GitHub\2021_ENCM369\encm369_pic18.c
+"70 C:\GitHub\2021_ENCM369\encm369_pic18.c
 [v _ClockSetup ClockSetup `(v  1 e 1 0 ]
-"88
+"89
 [v _GpioSetup GpioSetup `(v  1 e 1 0 ]
-"108
+"109
 [v _SysTickSetup SysTickSetup `(v  1 e 1 0 ]
-"130
+"131
 [v _SystemSleep SystemSleep `(v  1 e 1 0 ]
 "35 C:\GitHub\2021_ENCM369\main.c
 [v _main main `(v  1 e 1 0 ]
@@ -66,30 +66,30 @@
 {
 "97
 [v UserAppRun@u32Counter u32Counter `ul  1 a 4 0 ]
-"112
+"113
 } 0
 "76
 [v _UserAppInitialize UserAppInitialize `(v  1 e 1 0 ]
 {
 "80
 } 0
-"130 C:\GitHub\2021_ENCM369\encm369_pic18.c
+"131 C:\GitHub\2021_ENCM369\encm369_pic18.c
 [v _SystemSleep SystemSleep `(v  1 e 1 0 ]
 {
-"133
+"134
 } 0
-"108
+"109
 [v _SysTickSetup SysTickSetup `(v  1 e 1 0 ]
 {
-"113
+"114
 } 0
-"88
+"89
 [v _GpioSetup GpioSetup `(v  1 e 1 0 ]
 {
-"93
+"94
 } 0
-"69
+"70
 [v _ClockSetup ClockSetup `(v  1 e 1 0 ]
 {
-"73
+"74
 } 0

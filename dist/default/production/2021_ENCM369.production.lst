@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.31 build 20201012212115 
-                                                                                               Mon Feb 01 22:57:02 2021
+                                                                                               Mon Feb 01 23:05:02 2021
 
 Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1 
      1                           	processor	18F27Q43
@@ -201,7 +201,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    177                           
    178 ;; *************** function _UserAppRun *****************
    179 ;; Defined at:
-   180 ;;		line 95 in file "user_app.c"
+   180 ;;		line 96 in file "user_app.c"
    181 ;; Parameters:    Size  Location     Type
    182 ;;		None
    183 ;; Auto vars:     Size  Location     Type
@@ -244,7 +244,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    210  01FFAA                     _UserAppRun:
    211                           	callstack 127
    212  01FFAA                     
-   213                           ;user_app.c: 97:     u32 u32Counter = (286400);
+   213                           ;user_app.c: 98:     u32 u32Counter = (286400);
    214  01FFAA  0EC0               	movlw	192
    215  01FFAC  6E0E               	movwf	UserAppRun@u32Counter^(0+1280),c
    216  01FFAE  0E5E               	movlw	94
@@ -254,11 +254,11 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    220  01FFB6  0E00               	movlw	0
    221  01FFB8  6E11               	movwf	(UserAppRun@u32Counter+3)^(0+1280),c
    222                           
-   223                           ;user_app.c: 99:     while (u32Counter > 0)
+   223                           ;user_app.c: 100:     while (u32Counter > 0)
    224  01FFBA  EFE4  F0FF         	goto	l58
    225  01FFBE                     l745:
    226                           
-   227                           ;user_app.c: 100:     {;user_app.c: 101:         u32Counter--;
+   227                           ;user_app.c: 101:     {;user_app.c: 102:         u32Counter--;
    228  01FFBE  060E               	decf	UserAppRun@u32Counter^(0+1280),f,c
    229  01FFC0  0E00               	movlw	0
    230  01FFC2  5A0F               	subwfb	(UserAppRun@u32Counter+1)^(0+1280),f,c
@@ -266,7 +266,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    232  01FFC6  5A11               	subwfb	(UserAppRun@u32Counter+3)^(0+1280),f,c
    233  01FFC8                     l58:
    234                           
-   235                           ;user_app.c: 99:     while (u32Counter > 0)
+   235                           ;user_app.c: 100:     while (u32Counter > 0)
    236  01FFC8  500E               	movf	UserAppRun@u32Counter^(0+1280),w,c
    237  01FFCA  100F               	iorwf	(UserAppRun@u32Counter+1)^(0+1280),w,c
    238  01FFCC  1010               	iorwf	(UserAppRun@u32Counter+2)^(0+1280),w,c
@@ -278,7 +278,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    244  01FFDA  EFDF  F0FF         	goto	l745
    245  01FFDE                     u10:
    246  01FFDE                     
-   247                           ;user_app.c: 104:     if (LATA == 0xBF)
+   247                           ;user_app.c: 105:     if (LATA == 0xBF)
    248  01FFDE  0EBF               	movlw	191
    249  01FFE0  18BE               	xorwf	190,w,c	;volatile
    250  01FFE2  A4D8               	btfss	status,2,c
@@ -288,15 +288,15 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    254  01FFEC  EFFC  F0FF         	goto	l751
    255  01FFF0                     u20:
    256  01FFF0                     
-   257                           ;user_app.c: 105:     {;user_app.c: 106:         LATA = 0x80;
+   257                           ;user_app.c: 106:     {;user_app.c: 107:         LATA = 0x80;
    258  01FFF0  0E80               	movlw	128
    259  01FFF2  6EBE               	movwf	190,c	;volatile
    260                           
-   261                           ;user_app.c: 107:     }
+   261                           ;user_app.c: 108:     }
    262  01FFF4  EFFD  F0FF         	goto	l63
    263  01FFF8                     l751:
    264                           
-   265                           ;user_app.c: 109:     {;user_app.c: 110:         LATA += 0x01;
+   265                           ;user_app.c: 110:     {;user_app.c: 111:         LATA += 0x01;
    266  01FFF8  2ABE               	incf	190,f,c	;volatile
    267  01FFFA                     l63:
    268  01FFFA  0012               	return		;funcret
@@ -353,7 +353,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    309                           
    310 ;; *************** function _SystemSleep *****************
    311 ;; Defined at:
-   312 ;;		line 130 in file "encm369_pic18.c"
+   312 ;;		line 131 in file "encm369_pic18.c"
    313 ;; Parameters:    Size  Location     Type
    314 ;;		None
    315 ;; Auto vars:     Size  Location     Type
@@ -401,7 +401,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    347                           
    348 ;; *************** function _SysTickSetup *****************
    349 ;; Defined at:
-   350 ;;		line 108 in file "encm369_pic18.c"
+   350 ;;		line 109 in file "encm369_pic18.c"
    351 ;; Parameters:    Size  Location     Type
    352 ;;		None
    353 ;; Auto vars:     Size  Location     Type
@@ -444,7 +444,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    380  01FF66                     _SysTickSetup:
    381                           	callstack 127
    382  01FF66                     
-   383                           ;encm369_pic18.c: 110:   G_u32SystemTime1ms = 0;
+   383                           ;encm369_pic18.c: 111:   G_u32SystemTime1ms = 0;
    384  01FF66  0E00               	movlw	0
    385  01FF68  6E09               	movwf	_G_u32SystemTime1ms^(0+1280),c	;volatile
    386  01FF6A  0E00               	movlw	0
@@ -454,7 +454,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    390  01FF72  0E00               	movlw	0
    391  01FF74  6E0C               	movwf	(_G_u32SystemTime1ms+3)^(0+1280),c	;volatile
    392                           
-   393                           ;encm369_pic18.c: 111:   G_u32SystemTime1s = 0;
+   393                           ;encm369_pic18.c: 112:   G_u32SystemTime1s = 0;
    394  01FF76  0E00               	movlw	0
    395  01FF78  6E05               	movwf	_G_u32SystemTime1s^(0+1280),c	;volatile
    396  01FF7A  0E00               	movlw	0
@@ -469,7 +469,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    405                           
    406 ;; *************** function _GpioSetup *****************
    407 ;; Defined at:
-   408 ;;		line 88 in file "encm369_pic18.c"
+   408 ;;		line 89 in file "encm369_pic18.c"
    409 ;; Parameters:    Size  Location     Type
    410 ;;		None
    411 ;; Auto vars:     Size  Location     Type
@@ -512,16 +512,16 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    438  01FF44                     _GpioSetup:
    439                           	callstack 127
    440  01FF44                     
-   441                           ;encm369_pic18.c: 90:     ANSELA = 0x00;
+   441                           ;encm369_pic18.c: 91:     ANSELA = 0x00;
    442  01FF44  0E00               	movlw	0
    443  01FF46  0104               	movlb	4	; () banked
    444  01FF48  6F00               	movwf	0,b	;volatile
    445                           
-   446                           ;encm369_pic18.c: 91:     TRISA = 0x00;
+   446                           ;encm369_pic18.c: 92:     TRISA = 0x00;
    447  01FF4A  0E00               	movlw	0
    448  01FF4C  6EC6               	movwf	198,c	;volatile
    449                           
-   450                           ;encm369_pic18.c: 92:     LATA = 0x80;
+   450                           ;encm369_pic18.c: 93:     LATA = 0x80;
    451  01FF4E  0E80               	movlw	128
    452  01FF50  6EBE               	movwf	190,c	;volatile
    453  01FF52                     
@@ -1125,7 +1125,7 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.31 build 20201012212115 
-Symbol Table                                                                                   Mon Feb 01 22:57:02 2021
+Symbol Table                                                                                   Mon Feb 01 23:05:02 2021
 
      __size_of_SysTickSetup 0022                          l13 FF3E                          l22 FF40  
                         l16 FF52                          l19 FF86                          l55 FF42  

@@ -86,11 +86,12 @@ void UserAppInitialize(void)
 @brief Application code that runs once per system loop
 
 Requires:
-- 
+- RA0-7 setup as digital output
 
 Promises:
-- 
-
+- For RA0-5 to binary count every ~250ms
+- For RA7 to remain on
+ 
 */
 void UserAppRun(void)
 {

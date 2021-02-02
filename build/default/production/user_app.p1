@@ -2538,63 +2538,63 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;user_app.c: 80: }
 [e :UE 2272 ]
 }
-"95
-[; ;user_app.c: 95: void UserAppRun(void)
-[v _UserAppRun `(v ~T0 @X0 1 ef ]
 "96
-[; ;user_app.c: 96: {
+[; ;user_app.c: 96: void UserAppRun(void)
+[v _UserAppRun `(v ~T0 @X0 1 ef ]
+"97
+[; ;user_app.c: 97: {
 {
 [e :U _UserAppRun ]
 [f ]
-"97
-[; ;user_app.c: 97:     u32 u32Counter = (286400);
+"98
+[; ;user_app.c: 98:     u32 u32Counter = (286400);
 [v _u32Counter `ul ~T0 @X0 1 a ]
 [e = _u32Counter -> -> 286400 `l `ul ]
-"99
-[; ;user_app.c: 99:     while (u32Counter > 0)
+"100
+[; ;user_app.c: 100:     while (u32Counter > 0)
 [e $U 2274  ]
 [e :U 2275 ]
-"100
-[; ;user_app.c: 100:     {
-{
 "101
-[; ;user_app.c: 101:         u32Counter--;
-[e -- _u32Counter -> -> -> 1 `i `l `ul ]
+[; ;user_app.c: 101:     {
+{
 "102
-[; ;user_app.c: 102:     }
+[; ;user_app.c: 102:         u32Counter--;
+[e -- _u32Counter -> -> -> 1 `i `l `ul ]
+"103
+[; ;user_app.c: 103:     }
 }
 [e :U 2274 ]
-"99
-[; ;user_app.c: 99:     while (u32Counter > 0)
+"100
+[; ;user_app.c: 100:     while (u32Counter > 0)
 [e $ > _u32Counter -> -> -> 0 `i `l `ul 2275  ]
 [e :U 2276 ]
-"104
-[; ;user_app.c: 104:     if (LATA == 0xBF)
-[e $ ! == -> _LATA `i -> 191 `i 2277  ]
 "105
-[; ;user_app.c: 105:     {
-{
+[; ;user_app.c: 105:     if (LATA == 0xBF)
+[e $ ! == -> _LATA `i -> 191 `i 2277  ]
 "106
-[; ;user_app.c: 106:         LATA = 0x80;
-[e = _LATA -> -> 128 `i `uc ]
+[; ;user_app.c: 106:     {
+{
 "107
-[; ;user_app.c: 107:     }
+[; ;user_app.c: 107:         LATA = 0x80;
+[e = _LATA -> -> 128 `i `uc ]
+"108
+[; ;user_app.c: 108:     }
 }
 [e $U 2278  ]
-"108
-[; ;user_app.c: 108:     else
-[e :U 2277 ]
 "109
-[; ;user_app.c: 109:     {
-{
+[; ;user_app.c: 109:     else
+[e :U 2277 ]
 "110
-[; ;user_app.c: 110:         LATA += 0x01;
-[e =+ _LATA -> -> 1 `i `Vuc ]
+[; ;user_app.c: 110:     {
+{
 "111
-[; ;user_app.c: 111:     }
+[; ;user_app.c: 111:         LATA += 0x01;
+[e =+ _LATA -> -> 1 `i `Vuc ]
+"112
+[; ;user_app.c: 112:     }
 }
 [e :U 2278 ]
-"112
-[; ;user_app.c: 112: }
+"113
+[; ;user_app.c: 113: }
 [e :UE 2273 ]
 }

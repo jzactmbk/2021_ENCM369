@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\JZACTPC\AppData\Local\Temp\sbps.o
+$C:\Users\JZACTPC\AppData\Local\Temp\s6o0.o
 idloc IDLOC 5 200000 200000 20 1
 init CODE 0 1FFFC 1FFFC 4 1
 reset_vec CODE 0 0 0 4 1
@@ -96,30 +96,30 @@ MEDIUMCONST 12600-1FF3D 1
 $dist/default/production\2021_ENCM369.production.o
 1FF3E text6 CODE >69:C:\GitHub\2021_ENCM369\encm369_pic18.c
 1FF3E text6 CODE >73:C:\GitHub\2021_ENCM369\encm369_pic18.c
-1FF44 text5 CODE >88:C:\GitHub\2021_ENCM369\encm369_pic18.c
-1FF44 text5 CODE >90:C:\GitHub\2021_ENCM369\encm369_pic18.c
-1FF4A text5 CODE >91:C:\GitHub\2021_ENCM369\encm369_pic18.c
-1FF4E text5 CODE >92:C:\GitHub\2021_ENCM369\encm369_pic18.c
-1FF52 text5 CODE >93:C:\GitHub\2021_ENCM369\encm369_pic18.c
-1FF66 text4 CODE >108:C:\GitHub\2021_ENCM369\encm369_pic18.c
-1FF66 text4 CODE >110:C:\GitHub\2021_ENCM369\encm369_pic18.c
-1FF76 text4 CODE >111:C:\GitHub\2021_ENCM369\encm369_pic18.c
-1FF86 text4 CODE >113:C:\GitHub\2021_ENCM369\encm369_pic18.c
-1FF40 text3 CODE >130:C:\GitHub\2021_ENCM369\encm369_pic18.c
-1FF40 text3 CODE >133:C:\GitHub\2021_ENCM369\encm369_pic18.c
+1FF44 text5 CODE >89:C:\GitHub\2021_ENCM369\encm369_pic18.c
+1FF44 text5 CODE >91:C:\GitHub\2021_ENCM369\encm369_pic18.c
+1FF4A text5 CODE >92:C:\GitHub\2021_ENCM369\encm369_pic18.c
+1FF4E text5 CODE >93:C:\GitHub\2021_ENCM369\encm369_pic18.c
+1FF52 text5 CODE >94:C:\GitHub\2021_ENCM369\encm369_pic18.c
+1FF66 text4 CODE >109:C:\GitHub\2021_ENCM369\encm369_pic18.c
+1FF66 text4 CODE >111:C:\GitHub\2021_ENCM369\encm369_pic18.c
+1FF76 text4 CODE >112:C:\GitHub\2021_ENCM369\encm369_pic18.c
+1FF86 text4 CODE >114:C:\GitHub\2021_ENCM369\encm369_pic18.c
+1FF40 text3 CODE >131:C:\GitHub\2021_ENCM369\encm369_pic18.c
+1FF40 text3 CODE >134:C:\GitHub\2021_ENCM369\encm369_pic18.c
 1FF42 text2 CODE >76:C:\GitHub\2021_ENCM369\user_app.c
 1FF42 text2 CODE >80:C:\GitHub\2021_ENCM369\user_app.c
-1FFAA text1 CODE >95:C:\GitHub\2021_ENCM369\user_app.c
-1FFAA text1 CODE >97:C:\GitHub\2021_ENCM369\user_app.c
-1FFBA text1 CODE >99:C:\GitHub\2021_ENCM369\user_app.c
-1FFBE text1 CODE >101:C:\GitHub\2021_ENCM369\user_app.c
-1FFC8 text1 CODE >99:C:\GitHub\2021_ENCM369\user_app.c
-1FFC8 text1 CODE >102:C:\GitHub\2021_ENCM369\user_app.c
-1FFDE text1 CODE >104:C:\GitHub\2021_ENCM369\user_app.c
-1FFF0 text1 CODE >106:C:\GitHub\2021_ENCM369\user_app.c
-1FFF4 text1 CODE >107:C:\GitHub\2021_ENCM369\user_app.c
-1FFF8 text1 CODE >110:C:\GitHub\2021_ENCM369\user_app.c
-1FFFA text1 CODE >112:C:\GitHub\2021_ENCM369\user_app.c
+1FFAA text1 CODE >96:C:\GitHub\2021_ENCM369\user_app.c
+1FFAA text1 CODE >98:C:\GitHub\2021_ENCM369\user_app.c
+1FFBA text1 CODE >100:C:\GitHub\2021_ENCM369\user_app.c
+1FFBE text1 CODE >102:C:\GitHub\2021_ENCM369\user_app.c
+1FFC8 text1 CODE >100:C:\GitHub\2021_ENCM369\user_app.c
+1FFC8 text1 CODE >103:C:\GitHub\2021_ENCM369\user_app.c
+1FFDE text1 CODE >105:C:\GitHub\2021_ENCM369\user_app.c
+1FFF0 text1 CODE >107:C:\GitHub\2021_ENCM369\user_app.c
+1FFF4 text1 CODE >108:C:\GitHub\2021_ENCM369\user_app.c
+1FFF8 text1 CODE >111:C:\GitHub\2021_ENCM369\user_app.c
+1FFFA text1 CODE >113:C:\GitHub\2021_ENCM369\user_app.c
 1FF88 text0 CODE >35:C:\GitHub\2021_ENCM369\main.c
 1FF88 text0 CODE >37:C:\GitHub\2021_ENCM369\main.c
 1FF8A text0 CODE >40:C:\GitHub\2021_ENCM369\main.c
@@ -128,18 +128,18 @@ $dist/default/production\2021_ENCM369.production.o
 1FF96 text0 CODE >47:C:\GitHub\2021_ENCM369\main.c
 1FF9A text0 CODE >57:C:\GitHub\2021_ENCM369\main.c
 1FF9E text0 CODE >62:C:\GitHub\2021_ENCM369\main.c
-1FF54 cinit CODE >5081:C:\Users\JZACTPC\AppData\Local\Temp\sbps.s
-1FF54 cinit CODE >5083:C:\Users\JZACTPC\AppData\Local\Temp\sbps.s
-1FF54 cinit CODE >5086:C:\Users\JZACTPC\AppData\Local\Temp\sbps.s
-1FF54 cinit CODE >5108:C:\Users\JZACTPC\AppData\Local\Temp\sbps.s
-1FF58 cinit CODE >5109:C:\Users\JZACTPC\AppData\Local\Temp\sbps.s
-1FF5A cinit CODE >5110:C:\Users\JZACTPC\AppData\Local\Temp\sbps.s
-1FF5A cinit CODE >5111:C:\Users\JZACTPC\AppData\Local\Temp\sbps.s
-1FF5C cinit CODE >5112:C:\Users\JZACTPC\AppData\Local\Temp\sbps.s
-1FF5E cinit CODE >5113:C:\Users\JZACTPC\AppData\Local\Temp\sbps.s
-1FF60 cinit CODE >5119:C:\Users\JZACTPC\AppData\Local\Temp\sbps.s
-1FF60 cinit CODE >5121:C:\Users\JZACTPC\AppData\Local\Temp\sbps.s
-1FF62 cinit CODE >5122:C:\Users\JZACTPC\AppData\Local\Temp\sbps.s
+1FF54 cinit CODE >5081:C:\Users\JZACTPC\AppData\Local\Temp\s6o0.s
+1FF54 cinit CODE >5083:C:\Users\JZACTPC\AppData\Local\Temp\s6o0.s
+1FF54 cinit CODE >5086:C:\Users\JZACTPC\AppData\Local\Temp\s6o0.s
+1FF54 cinit CODE >5108:C:\Users\JZACTPC\AppData\Local\Temp\s6o0.s
+1FF58 cinit CODE >5109:C:\Users\JZACTPC\AppData\Local\Temp\s6o0.s
+1FF5A cinit CODE >5110:C:\Users\JZACTPC\AppData\Local\Temp\s6o0.s
+1FF5A cinit CODE >5111:C:\Users\JZACTPC\AppData\Local\Temp\s6o0.s
+1FF5C cinit CODE >5112:C:\Users\JZACTPC\AppData\Local\Temp\s6o0.s
+1FF5E cinit CODE >5113:C:\Users\JZACTPC\AppData\Local\Temp\s6o0.s
+1FF60 cinit CODE >5119:C:\Users\JZACTPC\AppData\Local\Temp\s6o0.s
+1FF60 cinit CODE >5121:C:\Users\JZACTPC\AppData\Local\Temp\s6o0.s
+1FF62 cinit CODE >5122:C:\Users\JZACTPC\AppData\Local\Temp\s6o0.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -158,22 +158,22 @@ __Hspace_1 512 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
 __Hspace_2 0 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
 __Hspace_4 60000A 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production\2021_ENCM369.production.o
-__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\JZACTPC\AppData\Local\Temp\sbps.o
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\JZACTPC\AppData\Local\Temp\s6o0.o
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\2021_ENCM369.production.o
 __Lsmallconst 0 0 SMALLCONST 0 smallconst dist/default/production\2021_ENCM369.production.o
 _LATA 4BE 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
-___sp 0 0 STACK 2 stack C:\Users\JZACTPC\AppData\Local\Temp\sbps.o
+___sp 0 0 STACK 2 stack C:\Users\JZACTPC\AppData\Local\Temp\s6o0.o
 _main 1FF88 0 CODE 0 text0 dist/default/production\2021_ENCM369.production.o
-start 1FFFC 0 CODE 0 init C:\Users\JZACTPC\AppData\Local\Temp\sbps.o
+start 1FFFC 0 CODE 0 init C:\Users\JZACTPC\AppData\Local\Temp\s6o0.o
 __size_of_main 0 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
 __HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\2021_ENCM369.production.o
 __size_of_SystemSleep 0 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
 __Hpowerup 0 0 CODE 0 powerup dist/default/production\2021_ENCM369.production.o
-__accesstop 560 0 ABS 0 - C:\Users\JZACTPC\AppData\Local\Temp\sbps.o
-intlevel0 0 0 CODE 0 text C:\Users\JZACTPC\AppData\Local\Temp\sbps.o
-intlevel1 0 0 CODE 0 text C:\Users\JZACTPC\AppData\Local\Temp\sbps.o
-intlevel2 0 0 CODE 0 text C:\Users\JZACTPC\AppData\Local\Temp\sbps.o
-intlevel3 0 0 CODE 0 text C:\Users\JZACTPC\AppData\Local\Temp\sbps.o
+__accesstop 560 0 ABS 0 - C:\Users\JZACTPC\AppData\Local\Temp\s6o0.o
+intlevel0 0 0 CODE 0 text C:\Users\JZACTPC\AppData\Local\Temp\s6o0.o
+intlevel1 0 0 CODE 0 text C:\Users\JZACTPC\AppData\Local\Temp\s6o0.o
+intlevel2 0 0 CODE 0 text C:\Users\JZACTPC\AppData\Local\Temp\s6o0.o
+intlevel3 0 0 CODE 0 text C:\Users\JZACTPC\AppData\Local\Temp\s6o0.o
 __LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\2021_ENCM369.production.o
 __LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\2021_ENCM369.production.o
 __Hifardata 0 0 CODE 0 ifardata dist/default/production\2021_ENCM369.production.o
@@ -181,8 +181,8 @@ __Hclrtext 0 0 ABS 0 clrtext dist/default/production\2021_ENCM369.production.o
 _UserAppRun 1FFAA 0 CODE 0 text1 dist/default/production\2021_ENCM369.production.o
 _ANSELA 400 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
 _G_u32SystemTime1s 505 0 COMRAM 1 bssCOMRAM dist/default/production\2021_ENCM369.production.o
-___inthi_sp 0 0 STACK 2 stack C:\Users\JZACTPC\AppData\Local\Temp\sbps.o
-___intlo_sp 0 0 STACK 2 stack C:\Users\JZACTPC\AppData\Local\Temp\sbps.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\JZACTPC\AppData\Local\Temp\s6o0.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\JZACTPC\AppData\Local\Temp\s6o0.o
 __Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\2021_ENCM369.production.o
 __Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\2021_ENCM369.production.o
 __size_of_UserAppInitialize 0 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
@@ -242,7 +242,7 @@ __Hbank36 0 0 ABS 0 bank36 dist/default/production\2021_ENCM369.production.o
 __Hbank37 0 0 ABS 0 bank37 dist/default/production\2021_ENCM369.production.o
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\2021_ENCM369.production.o
 __Hbigram 0 0 ABS 0 bigram dist/default/production\2021_ENCM369.production.o
-__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\JZACTPC\AppData\Local\Temp\sbps.o
+__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\JZACTPC\AppData\Local\Temp\s6o0.o
 _SystemSleep 1FF40 0 CODE 0 text3 dist/default/production\2021_ENCM369.production.o
 __Hcomram 0 0 ABS 0 comram dist/default/production\2021_ENCM369.production.o
 __Hconfig 30000A 0 CONFIG 4 config dist/default/production\2021_ENCM369.production.o
@@ -335,8 +335,8 @@ __end_of_SysTickSetup 1FF88 0 CODE 0 text4 dist/default/production\2021_ENCM369.
 _UserAppInitialize 1FF42 0 CODE 0 text2 dist/default/production\2021_ENCM369.production.o
 __Lfarbss 0 0 FARRAM 0 farbss dist/default/production\2021_ENCM369.production.o
 __Lfardata 0 0 FARRAM 0 fardata dist/default/production\2021_ENCM369.production.o
-stackhi 25FF 0 ABS 0 - C:\Users\JZACTPC\AppData\Local\Temp\sbps.o
-stacklo 560 0 ABS 0 - C:\Users\JZACTPC\AppData\Local\Temp\sbps.o
+stackhi 25FF 0 ABS 0 - C:\Users\JZACTPC\AppData\Local\Temp\s6o0.o
+stacklo 560 0 ABS 0 - C:\Users\JZACTPC\AppData\Local\Temp\s6o0.o
 __Lirdata 0 0 CODE 0 irdata dist/default/production\2021_ENCM369.production.o
 __Lspace_0 0 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
 __Lspace_1 0 0 ABS 0 - dist/default/production\2021_ENCM369.production.o
@@ -359,7 +359,7 @@ __ptext4 1FF66 0 CODE 0 text4 dist/default/production\2021_ENCM369.production.o
 __ptext5 1FF44 0 CODE 0 text5 dist/default/production\2021_ENCM369.production.o
 __ptext6 1FF3E 0 CODE 0 text6 dist/default/production\2021_ENCM369.production.o
 __Lstruct 0 0 COMRAM 1 struct dist/default/production\2021_ENCM369.production.o
-__ramtop 2600 0 RAM 0 ramtop C:\Users\JZACTPC\AppData\Local\Temp\sbps.o
+__ramtop 2600 0 RAM 0 ramtop C:\Users\JZACTPC\AppData\Local\Temp\s6o0.o
 __Lpowerup 0 0 CODE 0 powerup dist/default/production\2021_ENCM369.production.o
 __Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\2021_ENCM369.production.o
 _ClockSetup 1FF3E 0 CODE 0 text6 dist/default/production\2021_ENCM369.production.o

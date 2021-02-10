@@ -90,7 +90,7 @@ void GpioSetup(void)
 {
     ANSELA = 0x00; //Setting up RA0-7 as digital IO
     TRISA = 0x00; //Setting RA0-7 to be outputs
-    LATA = 0x80; //Setting RA7 latch to high, and RA0-6 latcheslow
+    LATA = 0x80; //Setting RA7 latch to high, and RA0-6 latches low
 } /* end GpioSetup() */
 
 

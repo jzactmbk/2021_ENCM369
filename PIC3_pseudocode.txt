@@ -1,5 +1,5 @@
-Intialization:
-	-Set ANSELA, and TRISA for digital output
+Intialization (runs at startup):
+	-Set ANSELA and TRISA values for digital output
 	-Set LATA to 0x80, so that RA7's LED is on
 
 user_app.c:

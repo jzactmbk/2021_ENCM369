@@ -87,20 +87,29 @@ void UserAppInitialize(void)
 
 Requires:
 - RA0-7 setup as digital output
+- RB4-5 setup as digital input
 
 Promises:
-- For RA0-5 to binary count every ~250ms
+- For RA0-6 to binary count upon button press via RB5
 - For RA7 to remain on
  
 */
 void UserAppRun(void)
 {
-    //static u32  u32Counter = (286400);
-    if ((PORTB & 0x20) == 0x20)
+    static u32 u32Count = 0;
+    static u8 u8LastButtonState = 0x00;
+    
+    if ((u8LastButtonState == 0x00) && (PORTB & 0x20) == 0x20)
     {
         LATA = (LATA + 0x01)|0x80;
+        u32Count+=1;
+        u8LastButtonState = 0x01;    
     }
-        
+    else if ((PORTB & 0x20) != 0x20)
+    {
+        u8LastButtonState = 0x00;    
+    }
+
 } /* end UserAppRun */
 
 

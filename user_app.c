@@ -95,7 +95,7 @@ Promises:
 */
 void UserAppRun(void)
 {
-    u32 u32Counter = (286400); 
+    static u32  u32Counter = (286400); 
     
     while (u32Counter > 0)
     {

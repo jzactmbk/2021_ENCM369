@@ -27315,19 +27315,10 @@ void UserAppInitialize(void)
 # 96 "user_app.c"
 void UserAppRun(void)
 {
-    u32 u32Counter = (286400);
 
-    while (u32Counter > 0)
+    if ((PORTB & 0x20) == 0x20)
     {
-        u32Counter--;
+        LATA = (LATA + 0x01)|0x80;
     }
 
-    if (LATA == 0xBF)
-    {
-        LATA = 0x80;
-    }
-    else
-    {
-        LATA += 0x01;
-    }
 }

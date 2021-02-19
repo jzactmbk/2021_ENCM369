@@ -95,21 +95,12 @@ Promises:
 */
 void UserAppRun(void)
 {
-    static u32  u32Counter = (286400); 
-    
-    while (u32Counter > 0)
+    //static u32  u32Counter = (286400);
+    if ((PORTB & 0x20) == 0x20)
     {
-        u32Counter--;
-    }   
-    
-    if (LATA == 0xBF)
-    {
-        LATA = 0x80;//The initial GpioSetup value
+        LATA = (LATA + 0x01)|0x80;
     }
-    else
-    {
-        LATA += 0x01;
-    }
+        
 } /* end UserAppRun */
 
 

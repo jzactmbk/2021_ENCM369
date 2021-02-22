@@ -96,16 +96,18 @@ Promises:
 */
 void UserAppRun(void)
 {
-    static u32 u32Count = 0;
-    static u8 u8LastButtonState = 0x00;
+    static u32 u32Count = 0; //Count of how many times the 6-bit counter has been incremented, for debugging
+    static u8 u8LastButtonState = 0x00; //Tracks last state of button 0x00 = open, 0x01 = closed
     
-    if ((u8LastButtonState == 0x00) && (PORTB & 0x20) == 0x20)
+    if ((u8LastButtonState == 0x00) && (PORTB & 0x20) == 0x20) //Check if button was pressed...
+                                                               //...and if the button is pressed now
     {
-        LATA = (LATA + 0x01)|0x80;
+        LATA = (LATA + 0x01)|0xC0; //Allows higher bits to be accumulated however...
+                                   //...only allows for RA0-5 to be set
         u32Count+=1;
         u8LastButtonState = 0x01;    
     }
-    else if ((PORTB & 0x20) != 0x20)
+    else if ((PORTB & 0x20) != 0x20) //Check else if the button was pressed but isn't pressed now
     {
         u8LastButtonState = 0x00;    
     }

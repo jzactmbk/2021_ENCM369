@@ -1,8 +1,0 @@
-Intialization (runs at startup):
-	-Set ANSELA and TRISA values for digital output
-	-Set LATA to 0x80, so that RA7's LED is on
-
-user_app.c:
-	-wait for 250ms
-	-Check the value of LATA, if 0xBF, indicating an overflow, reset to LATA to 0x80
-		-else: increment LATA

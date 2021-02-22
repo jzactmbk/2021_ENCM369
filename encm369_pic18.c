@@ -82,7 +82,6 @@ Requires:
 - All configurations must match connected hardware.
 
 Promises:
-- Output pin for PA31_HEARTBEAT is configured
 - RA0-7 configured for digital output, initial value 0x80
 - RB5 configured as digital inputs 
 

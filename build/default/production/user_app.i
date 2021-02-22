@@ -27319,8 +27319,10 @@ void UserAppRun(void)
     static u8 u8LastButtonState = 0x00;
 
     if ((u8LastButtonState == 0x00) && (PORTB & 0x20) == 0x20)
+
     {
-        LATA = (LATA + 0x01)|0x80;
+        LATA = (LATA + 0x01)|0xC0;
+
         u32Count+=1;
         u8LastButtonState = 0x01;
     }

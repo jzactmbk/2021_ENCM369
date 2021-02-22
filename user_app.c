@@ -87,7 +87,7 @@ void UserAppInitialize(void)
 
 Requires:
 - RA0-7 setup as digital output
-- RB4-5 setup as digital input
+- RB5 setup as digital input
 
 Promises:
 - For RA0-6 to binary count upon button press via RB5

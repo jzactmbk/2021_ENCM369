@@ -2571,11 +2571,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;encm369_pic18.c: 94:     LATA = 0x80;
 [e = _LATA -> -> 128 `i `uc ]
 "96
-[; ;encm369_pic18.c: 96:     ANSELB ^= 0x30;
-[e =^ _ANSELB -> -> 48 `i `Vuc ]
+[; ;encm369_pic18.c: 96:     ANSELB ^= 0x20;
+[e =^ _ANSELB -> -> 32 `i `Vuc ]
 "97
-[; ;encm369_pic18.c: 97:     TRISB ^= 0x30;
-[e =^ _TRISB -> -> 48 `i `Vuc ]
+[; ;encm369_pic18.c: 97:     TRISB &= 0x20;
+[e =& _TRISB -> -> 32 `i `Vuc ]
 "99
 [; ;encm369_pic18.c: 99: }
 [e :UE 2273 ]

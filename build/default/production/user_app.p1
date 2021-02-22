@@ -2564,38 +2564,38 @@ Version 4.0 HI-TECH Software Intermediate Code
 "102
 [; ;user_app.c: 102:     if ((u8LastButtonState == 0x00) && (PORTB & 0x20) == 0x20)
 [e $ ! && == -> F15921 `i -> 0 `i == & -> _PORTB `i -> 32 `i -> 32 `i 2274  ]
-"103
-[; ;user_app.c: 103:     {
-{
 "104
-[; ;user_app.c: 104:         LATA = (LATA + 0x01)|0x80;
-[e = _LATA -> | + -> _LATA `i -> 1 `i -> 128 `i `uc ]
+[; ;user_app.c: 104:     {
+{
 "105
-[; ;user_app.c: 105:         u32Count+=1;
-[e =+ F15920 -> -> -> 1 `i `l `ul ]
-"106
-[; ;user_app.c: 106:         u8LastButtonState = 0x01;
-[e = F15921 -> -> 1 `i `uc ]
+[; ;user_app.c: 105:         LATA = (LATA + 0x01)|0xC0;
+[e = _LATA -> | + -> _LATA `i -> 1 `i -> 192 `i `uc ]
 "107
-[; ;user_app.c: 107:     }
+[; ;user_app.c: 107:         u32Count+=1;
+[e =+ F15920 -> -> -> 1 `i `l `ul ]
+"108
+[; ;user_app.c: 108:         u8LastButtonState = 0x01;
+[e = F15921 -> -> 1 `i `uc ]
+"109
+[; ;user_app.c: 109:     }
 }
 [e $U 2275  ]
-"108
-[; ;user_app.c: 108:     else if ((PORTB & 0x20) != 0x20)
+"110
+[; ;user_app.c: 110:     else if ((PORTB & 0x20) != 0x20)
 [e :U 2274 ]
 [e $ ! != & -> _PORTB `i -> 32 `i -> 32 `i 2276  ]
-"109
-[; ;user_app.c: 109:     {
-{
-"110
-[; ;user_app.c: 110:         u8LastButtonState = 0x00;
-[e = F15921 -> -> 0 `i `uc ]
 "111
-[; ;user_app.c: 111:     }
+[; ;user_app.c: 111:     {
+{
+"112
+[; ;user_app.c: 112:         u8LastButtonState = 0x00;
+[e = F15921 -> -> 0 `i `uc ]
+"113
+[; ;user_app.c: 113:     }
 }
 [e :U 2276 ]
 [e :U 2275 ]
-"113
-[; ;user_app.c: 113: }
+"115
+[; ;user_app.c: 115: }
 [e :UE 2273 ]
 }

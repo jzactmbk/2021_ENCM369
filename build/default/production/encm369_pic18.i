@@ -27308,8 +27308,8 @@ void GpioSetup(void)
     TRISA = 0x00;
     LATA = 0x80;
 
-    ANSELB ^= 0x30;
-    TRISB ^= 0x30;
+    ANSELB ^= 0x20;
+    TRISB &= 0x20;
 
 }
 # 114 "encm369_pic18.c"

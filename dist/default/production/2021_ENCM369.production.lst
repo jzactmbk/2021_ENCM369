@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.31 build 20201012212115 
-                                                                                               Fri Feb 19 01:10:58 2021
+                                                                                               Mon Feb 22 15:25:53 2021
 
 Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1 
      1                           	processor	18F27Q43
@@ -265,12 +265,12 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    229  01FFCA  EFF4  F0FF         	goto	l68
    230  01FFCE                     u20:
    231  01FFCE                     
-   232                           ;user_app.c: 103:     {;user_app.c: 104:         LATA = (LATA + 0x01)|0x80;
+   232                           ;user_app.c: 104:     {;user_app.c: 105:         LATA = (LATA + 0x01)|0xC0;
    233  01FFCE  28BE               	incf	190,w,c	;volatile
-   234  01FFD0  0980               	iorlw	128
+   234  01FFD0  09C0               	iorlw	192
    235  01FFD2  6EBE               	movwf	190,c	;volatile
    236                           
-   237                           ;user_app.c: 105:         u32Count+=1;
+   237                           ;user_app.c: 107:         u32Count+=1;
    238  01FFD4  0E01               	movlw	1
    239  01FFD6  2601               	addwf	UserAppRun@u32Count^(0+1280),f,c
    240  01FFD8  0E00               	movlw	0
@@ -278,11 +278,11 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    242  01FFDC  2203               	addwfc	(UserAppRun@u32Count+2)^(0+1280),f,c
    243  01FFDE  2204               	addwfc	(UserAppRun@u32Count+3)^(0+1280),f,c
    244  01FFE0                     
-   245                           ;user_app.c: 106:         u8LastButtonState = 0x01;
+   245                           ;user_app.c: 108:         u8LastButtonState = 0x01;
    246  01FFE0  0E01               	movlw	1
    247  01FFE2  6E11               	movwf	UserAppRun@u8LastButtonState^(0+1280),c
    248                           
-   249                           ;user_app.c: 107:     }
+   249                           ;user_app.c: 109:     }
    250  01FFE4  EFFD  F0FF         	goto	l71
    251  01FFE8                     l68:
    252  01FFE8  BACF               	btfsc	207,5,c	;volatile
@@ -292,7 +292,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    256  01FFF2  EFFD  F0FF         	goto	l71
    257  01FFF6                     u30:
    258  01FFF6                     
-   259                           ;user_app.c: 109:     {;user_app.c: 110:         u8LastButtonState = 0x00;
+   259                           ;user_app.c: 111:     {;user_app.c: 112:         u8LastButtonState = 0x00;
    260  01FFF6  0E00               	movlw	0
    261  01FFF8  6E11               	movwf	UserAppRun@u8LastButtonState^(0+1280),c
    262  01FFFA                     l71:
@@ -523,14 +523,14 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
    447  01FF60  6EBE               	movwf	190,c	;volatile
    448  01FF62                     
    449                           ; BSR set to: 4
-   450                           ;encm369_pic18.c: 96:     ANSELB ^= 0x30;
-   451  01FF62  0E30               	movlw	48
+   450                           ;encm369_pic18.c: 96:     ANSELB ^= 0x20;
+   451  01FF62  0E20               	movlw	32
    452  01FF64  1B08               	xorwf	8,f,b	;volatile
    453  01FF66                     
    454                           ; BSR set to: 4
-   455                           ;encm369_pic18.c: 97:     TRISB ^= 0x30;
-   456  01FF66  0E30               	movlw	48
-   457  01FF68  1AC7               	xorwf	199,f,c	;volatile
+   455                           ;encm369_pic18.c: 97:     TRISB &= 0x20;
+   456  01FF66  0E20               	movlw	32
+   457  01FF68  16C7               	andwf	199,f,c	;volatile
    458  01FF6A                     
    459                           ; BSR set to: 4
    460  01FF6A  0012               	return		;funcret
@@ -1131,7 +1131,7 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.31 build 20201012212115 
-Symbol Table                                                                                   Fri Feb 19 01:10:58 2021
+Symbol Table                                                                                   Mon Feb 22 15:25:53 2021
 
       __size_of_SysTickSetup 0022                           l20 FF6A                           l23 FF8C  
                          l17 FF3C                           l26 FF3E                           l61 FF40  

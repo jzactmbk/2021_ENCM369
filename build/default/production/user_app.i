@@ -27289,6 +27289,7 @@ void SystemSleep(void);
 # 27 "./user_app.h"
 void UserAppInitialize(void);
 void UserAppRun(void);
+void TimeXus(u16 u16TimerTime);
 # 106 "./configuration.h" 2
 # 26 "user_app.c" 2
 
@@ -27313,7 +27314,7 @@ void UserAppInitialize(void)
     LATA = 0x80;
 
 
-    T0CON0 = 0x48;
+    T0CON0 = 0x90;
 
 
     T0CON1 = 0x54;
@@ -27322,13 +27323,38 @@ void UserAppInitialize(void)
 # 104 "user_app.c"
 void UserAppRun(void)
 {
-    u8 u8LATATemp = LATA;
+    static u16 u16CallCounter = 0;
+    u16CallCounter += 1;
 
+    u8 u8LATATemp = LATA;
     u8LATATemp &= 0xC0;
 
-    u8LATATemp ^= ((LATA & 0x3F) + 0x01);
 
-    LATA = u8LATATemp;
+     if (u16CallCounter == 500)
+    {
+        u16CallCounter = 0;
+        u8LATATemp ^= 0x01;
+        LATA ^= 0x01;
+    }
+
+
+}
+# 139 "user_app.c"
+void TimeXus(u16 u16TimerTime)
+{
+
+
+    T0CON0 &= 0x7F;
+
+    TMR0H = (0xFFFF - u16TimerTime) >> 8;
+
+
+
+    TMR0L = (0xFFFF - u16TimerTime) & 0x00FF;
+
+
+    PIR3 &= 0x7F;
+    T0CON0 |= 0x80;
 
 
 }

@@ -80,7 +80,7 @@ void UserAppInitialize(void)
     LATA = 0x80; //Setting RA7 latch to digital high, and RA0-6 latches low
     
     //Enabling timer0 in 16-bit mode with a post-scaler value of 1:1
-    T0CON0 = 0xF0;
+    T0CON0 = 0x90;
     
     //Setting timer0 to asynchronous. mode with (Fosc/4) as the source with a pre-scaler of 1:16
     T0CON1 = 0x54;
@@ -103,38 +103,55 @@ Promises:
 */
 void UserAppRun(void)
 {
+    static u16 u16CallCounter = 0;
+    u16CallCounter += 1;
+    
     u8 u8LATATemp = LATA;
+    //u8LATATemp &= 0xC0; //Clearing 6LSBs
+    //u8LATATemp |= ((LATA & 0x3F) + 0x01); //Incrementing LATA's 6 LSBs
     
-    u8LATATemp &= 0xC0; //Clearing 6LSBs
-    
-    u8LATATemp ^= ((LATA & 0x3F) + 0x01); //Incrementing LATA's 6 LSBs
-    
-    LATA = u8LATATemp;
+     if (u16CallCounter == 500)
+    {
+        u16CallCounter = 0;
+        LATA ^= 0x01;
+    }
     
     
 } /* end UserAppRun */
 
 /*!--------------------------------------------------------------------------------------------------------------------
-@fn void TimeXus(INPUT_PARAMETER_)
+@fn void TimeXus(u16 u16TimeXus)
 
 @brief Sets Timer0 to count u16Microseconds_
 
 Requires:
 - Timer0 configured such that each timer tick is 1 microsecond
-- INPUT_PARAMETER_ is the value in microseconds to time from 1 to 65535
+- u16 u16TimeXus is the value in microseconds to time from 1 to 65535
 
 Promises:
 - Pre-loads TMR0H:L to clock out desired period
 - TMR0IF cleared
 - Timer0 enabled
- * 
+
 */
-void TimeXus(INPUT_PARAMETER_)
+
+void TimeXus(u16 u16TimerTime)
 {
     /* OPTIONAL: range check and handle edge cases */
-    /* Disable the timer during config */
-    /* Preload TMR0H and TMR0L based on u16TimeXus */
-    /* Clear TMR0IF and enable Timer 0 */
+    
+    T0CON0 &= 0x7F; //Disabling timer0
+    
+    TMR0H = (0xFFFF - u16TimerTime) >> 8; /*Right shifting upper 8 bits of u16TimerTime 
+                               to fit in 8-bit TMR0H*/ 
+    
+    //Pre-loading TMR0L/H based on passed u16TimerTime
+    TMR0L = (0xFFFF - u16TimerTime) & 0x00FF; /*Taking only the lower 8 bits of u16TimerTime
+                                               for TMR0L*/  
+    
+    PIR3 &= 0x7F; //Clearing the TMR0IF flag
+    T0CON0 |= 0x80; //Enabling timer0
+    
+    
 }  /* end TimeXus () */
 
 

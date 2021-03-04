@@ -95,26 +95,42 @@ void UserAppInitialize(void)
 
 Requires:+
 - RA0-7 setup as digital output
+- For a delay between calls of 1ms
 
 Promises:
-- For RA0-5 t
-- For RA7 to remain on
+- For RA0-5 to display a LED pattern, updating every 0.5 seconds
  
 */
 void UserAppRun(void)
 {
+    static u8 u8ArrayIndex = 0;
     static u16 u16CallCounter = 0;
-    u16CallCounter += 1;
     
-    u8 u8LATATemp = LATA;
-    //u8LATATemp &= 0xC0; //Clearing 6LSBs
-    //u8LATATemp |= ((LATA & 0x3F) + 0x01); //Incrementing LATA's 6 LSBs
+    static u8 au8Pattern[27] = {0x00, 0x01, 0x02, 0x04, 0x08,
+                                0x10, 0x20, 0x21, 0x22, 0x24,
+                                0x28, 0x30, 0x31, 0x32, 0x34,
+                                0x38, 0x39, 0x3A, 0x3C, 0x3D,
+                                0x3E, 0x3F, 0x3E, 0x3C, 0x38,
+                                0x30, 0x20};
     
-     if (u16CallCounter == 500)
+    //LED pattern updates every 0.5seconds since main TimeXus delay is set to 1ms
+    if(u16CallCounter == 250)
     {
+        if (u8ArrayIndex == 27)
+        {
+            u8ArrayIndex = 0;
+        }
+        
+        LATA = au8Pattern[u8ArrayIndex];
+        
+        u8ArrayIndex++;
         u16CallCounter = 0;
-        LATA ^= 0x01;
     }
+    else
+    {
+        u16CallCounter++;
+    }
+
     
     
 } /* end UserAppRun */
@@ -137,8 +153,6 @@ Promises:
 
 void TimeXus(u16 u16TimerTime)
 {
-    /* OPTIONAL: range check and handle edge cases */
-    
     T0CON0 &= 0x7F; //Disabling timer0
     
     TMR0H = (0xFFFF - u16TimerTime) >> 8; /*Right shifting upper 8 bits of u16TimerTime 

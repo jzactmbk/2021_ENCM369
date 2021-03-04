@@ -2608,31 +2608,31 @@ Version 4.0 HI-TECH Software Intermediate Code
 "63
 [; ;main.c: 63:     TimeXus(1000);
 [e ( _TimeXus (1 -> -> 1000 `i `us ]
-"65
-[; ;main.c: 65:     while ( (PIR3 & 0x80) == 0x00)
+"64
+[; ;main.c: 64:     while ( (PIR3 & 0x80) == 0x00)
 [e $U 2276  ]
 [e :U 2277 ]
-"66
-[; ;main.c: 66:     {
+"65
+[; ;main.c: 65:     {
 {
-"67
-[; ;main.c: 67:     }
+"66
+[; ;main.c: 66:     }
 }
 [e :U 2276 ]
-"65
-[; ;main.c: 65:     while ( (PIR3 & 0x80) == 0x00)
+"64
+[; ;main.c: 64:     while ( (PIR3 & 0x80) == 0x00)
 [e $ == & -> _PIR3 `i -> 128 `i -> 0 `i 2277  ]
 [e :U 2278 ]
-"68
-[; ;main.c: 68:     (LATA |= 0x80);
+"67
+[; ;main.c: 67:     (LATA |= 0x80);
 [e =| _LATA -> -> 128 `i `Vuc ]
-"70
-[; ;main.c: 70:   }
+"69
+[; ;main.c: 69:   }
 }
 [e :U 2273 ]
 [e $U 2274  ]
 [e :U 2275 ]
-"72
-[; ;main.c: 72: }
+"71
+[; ;main.c: 71: }
 [e :UE 2272 ]
 }

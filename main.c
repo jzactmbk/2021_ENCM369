@@ -61,7 +61,6 @@ void main(void)
     HEARTBEAT_OFF();
     SystemSleep();
     TimeXus(1000);
-    
     while ( (PIR3 & 0x80) == 0x00)
     {
     }

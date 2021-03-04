@@ -27323,27 +27323,40 @@ void UserAppInitialize(void)
 # 104 "user_app.c"
 void UserAppRun(void)
 {
+    static u8 u8ArrayIndex = 0;
     static u16 u16CallCounter = 0;
-    u16CallCounter += 1;
 
-    u8 u8LATATemp = LATA;
-    u8LATATemp &= 0xC0;
+    static u8 au8Pattern[27] = {0x00, 0x01, 0x02, 0x04, 0x08,
+                                0x10, 0x20, 0x21, 0x22, 0x24,
+                                0x28, 0x30, 0x31, 0x32, 0x34,
+                                0x38, 0x39, 0x3A, 0x3C, 0x3D,
+                                0x3E, 0x3F, 0x3E, 0x3C, 0x38,
+                                0x30, 0x20};
 
 
-     if (u16CallCounter == 500)
+    if(u16CallCounter == 250)
     {
+        if (u8ArrayIndex == 27)
+        {
+            u8ArrayIndex = 0;
+        }
+
+        LATA = au8Pattern[u8ArrayIndex];
+
+        u8ArrayIndex++;
         u16CallCounter = 0;
-        u8LATATemp ^= 0x01;
-        LATA ^= 0x01;
+    }
+    else
+    {
+        u16CallCounter++;
     }
 
 
+
 }
-# 139 "user_app.c"
+# 154 "user_app.c"
 void TimeXus(u16 u16TimerTime)
 {
-
-
     T0CON0 &= 0x7F;
 
     TMR0H = (0xFFFF - u16TimerTime) >> 8;

@@ -83,14 +83,14 @@ Requires:
 
 Promises:
 - Output pin for PA31_HEARTBEAT is configured
-- RA0-7 configured for digital output, initial value 0x80
+- RA0-7 configured for digital output, initial value 0x00
 
 */
 void GpioSetup(void)
 {
     ANSELA = 0x00; //Setting up RA0-7 as digital IO
     TRISA = 0x00; //Setting RA0-7 to be outputs
-    LATA = 0x80; //Setting RA7 latch to high, and RA0-6 latches low
+    LATA  = 0x00; //Setting RA0-7 to be default off/low
 } /* end GpioSetup() */
 
 

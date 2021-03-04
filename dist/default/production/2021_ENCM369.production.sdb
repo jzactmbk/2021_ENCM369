@@ -31,17 +31,20 @@
 [v _ClockSetup ClockSetup `(v  1 e 1 0 ]
 "89
 [v _GpioSetup GpioSetup `(v  1 e 1 0 ]
-"109
+"108
 [v _SysTickSetup SysTickSetup `(v  1 e 1 0 ]
-"131
+"130
 [v _SystemSleep SystemSleep `(v  1 e 1 0 ]
 "35 C:\GitHub\2021_ENCM369\main.c
 [v _main main `(v  1 e 1 0 ]
-"76 C:\GitHub\2021_ENCM369\user_app.c
+"77 C:\GitHub\2021_ENCM369\user_app.c
 [v _UserAppInitialize UserAppInitialize `(v  1 e 1 0 ]
-"96
+"104
 [v _UserAppRun UserAppRun `(v  1 e 1 0 ]
-"37918 C:/Program Files/Microchip/MPLABX/v5_45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h
+"22627 C:/Program Files/Microchip/MPLABX/v5_45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h
+[v _T0CON0 T0CON0 `VEuc  1 e 1 @794 ]
+"22725
+[v _T0CON1 T0CON1 `VEuc  1 e 1 @795 ]
 "37918
 [v _ANSELA ANSELA `VEuc  1 e 1 @1024 ]
 "45585
@@ -61,32 +64,32 @@
 {
 "67
 } 0
-"96 C:\GitHub\2021_ENCM369\user_app.c
+"104 C:\GitHub\2021_ENCM369\user_app.c
 [v _UserAppRun UserAppRun `(v  1 e 1 0 ]
 {
-"98
-[v UserAppRun@u32Counter u32Counter `ul  1 a 4 0 ]
-"113
+"106
+[v UserAppRun@u8LATATemp u8LATATemp `uc  1 a 1 1 ]
+"115
 } 0
-"76
+"77
 [v _UserAppInitialize UserAppInitialize `(v  1 e 1 0 ]
 {
-"80
+"88
 } 0
-"131 C:\GitHub\2021_ENCM369\encm369_pic18.c
+"130 C:\GitHub\2021_ENCM369\encm369_pic18.c
 [v _SystemSleep SystemSleep `(v  1 e 1 0 ]
 {
-"134
+"133
 } 0
-"109
+"108
 [v _SysTickSetup SysTickSetup `(v  1 e 1 0 ]
 {
-"114
+"113
 } 0
 "89
 [v _GpioSetup GpioSetup `(v  1 e 1 0 ]
 {
-"94
+"93
 } 0
 "69
 [v _ClockSetup ClockSetup `(v  1 e 1 0 ]

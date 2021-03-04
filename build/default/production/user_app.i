@@ -27306,28 +27306,29 @@ volatile u8 G_u8UserAppFlags;
 extern volatile u32 G_u32SystemTime1ms;
 extern volatile u32 G_u32SystemTime1s;
 extern volatile u32 G_u32SystemFlags;
-# 76 "user_app.c"
+# 77 "user_app.c"
 void UserAppInitialize(void)
 {
 
+    LATA = 0x80;
+
+
+    T0CON0 = 0x48;
+
+
+    T0CON1 = 0x54;
 
 }
-# 96 "user_app.c"
+# 104 "user_app.c"
 void UserAppRun(void)
 {
-    u32 u32Counter = (286400);
+    u8 u8LATATemp = LATA;
 
-    while (u32Counter > 0)
-    {
-        u32Counter--;
-    }
+    u8LATATemp &= 0xC0;
 
-    if (LATA == 0xBF)
-    {
-        LATA = 0x80;
-    }
-    else
-    {
-        LATA += 0x01;
-    }
+    u8LATATemp ^= ((LATA & 0x3F) + 0x01);
+
+    LATA = u8LATATemp;
+
+
 }

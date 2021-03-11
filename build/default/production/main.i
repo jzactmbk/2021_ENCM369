@@ -27333,11 +27333,19 @@ void main(void)
     UserAppRun();
 
 
+
     (LATA &= 0x7F);
     SystemSleep();
 
-    TimeXus(11);
-    while ( (PIR3 & 0x80) == 0x00);
+
+
+    TimeXus(4);
+
+    while ( (PIR3 & 0x80) == 0x00)
+    {
+    }
+
+    UserAppRun();
     (LATA |= 0x80);
 
   }

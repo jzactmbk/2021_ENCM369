@@ -37,11 +37,11 @@
 [v _SystemSleep SystemSleep `(v  1 e 1 0 ]
 "35 C:\GitHub\2021_ENCM369\main.c
 [v _main main `(v  1 e 1 0 ]
-"77 C:\GitHub\2021_ENCM369\user_app.c
+"94 C:\GitHub\2021_ENCM369\user_app.c
 [v _UserAppInitialize UserAppInitialize `(v  1 e 1 0 ]
-"103
+"117
 [v _UserAppRun UserAppRun `(v  1 e 1 0 ]
-"142
+"141
 [v _TimeXus TimeXus `(v  1 e 1 0 ]
 "3158 C:/Program Files/Microchip/MPLABX/v5_45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h
 [v _DAC1DATL DAC1DATL `VEuc  1 e 1 @125 ]
@@ -71,28 +71,30 @@
 [v _G_u32SystemFlags G_u32SystemFlags `VEul  1 e 4 0 ]
 "33 C:\GitHub\2021_ENCM369\user_app.c
 [v _G_u8UserAppFlags G_u8UserAppFlags `VEuc  1 e 1 0 ]
+"48
+[v _UserApp_au8SineTable UserApp_au8SineTable `[256]uc  1 s 256 UserApp_au8SineTable ]
 "35 C:\GitHub\2021_ENCM369\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"77
+"69
 } 0
-"103 C:\GitHub\2021_ENCM369\user_app.c
+"117 C:\GitHub\2021_ENCM369\user_app.c
 [v _UserAppRun UserAppRun `(v  1 e 1 0 ]
 {
-"105
-[v UserAppRun@u8SlopeState u8SlopeState `uc  1 s 1 u8SlopeState ]
-"124
+"119
+[v UserAppRun@u8ArrayIndex u8ArrayIndex `uc  1 s 1 u8ArrayIndex ]
+"123
 } 0
-"77
+"94
 [v _UserAppInitialize UserAppInitialize `(v  1 e 1 0 ]
 {
-"88
+"102
 } 0
-"142
+"141
 [v _TimeXus TimeXus `(v  1 e 1 0 ]
 {
 [v TimeXus@u16TimerTime u16TimerTime `us  1 p 2 0 ]
-"157
+"156
 } 0
 "133 C:\GitHub\2021_ENCM369\encm369_pic18.c
 [v _SystemSleep SystemSleep `(v  1 e 1 0 ]

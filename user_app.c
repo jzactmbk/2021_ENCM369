@@ -84,7 +84,7 @@ void UserAppInitialize(void)
     
     //Setting timer0 to asynchronous. mode with (Fosc/4) as the source with a pre-scaler of 1:16
     T0CON1 = 0x54;
-
+   
 } /* end UserAppInitialize() */
 
   
@@ -94,44 +94,32 @@ void UserAppInitialize(void)
 @brief Application code that runs once per system loop
 
 Requires:+
-- RA0-7 setup as digital output
-- For a delay between calls of 1ms
+- Delay/system tick of 4us between calls
 
 Promises:
-- For RA0-5 to display a LED pattern, updating every 0.5 seconds
+- To create a triangle wave @ 976.56Hz on DAC1
  
 */
 void UserAppRun(void)
 {
-    static u8 u8ArrayIndex = 0;
-    static u16 u16CallCounter = 0;
+    static u8 u8SlopeState = 0;
     
-    static u8 au8Pattern[27] = {0x00, 0x01, 0x02, 0x04, 0x08,
-                                0x10, 0x20, 0x21, 0x22, 0x24,
-                                0x28, 0x30, 0x31, 0x32, 0x34,
-                                0x38, 0x39, 0x3A, 0x3C, 0x3D,
-                                0x3E, 0x3F, 0x3E, 0x3C, 0x38,
-                                0x30, 0x20};
-    
-    //LED pattern updates every 0.5seconds since main TimeXus delay is set to 1ms
-    if(u16CallCounter == 250)
+    if (u8SlopeState == 0)
     {
-        if (u8ArrayIndex == 27)
+        if(DAC1DATL == 0xFE)
         {
-            u8ArrayIndex = 0;
+            u8SlopeState = 1;
         }
-        
-        LATA = au8Pattern[u8ArrayIndex];
-        
-        u8ArrayIndex++;
-        u16CallCounter = 0;
+        DAC1DATL +=1;
     }
-    else
+    else 
     {
-        u16CallCounter++;
+        if(DAC1DATL == 0x01)
+        {
+            u8SlopeState = 0;
+        }
+        DAC1DATL -=1;
     }
-
-    
     
 } /* end UserAppRun */
 

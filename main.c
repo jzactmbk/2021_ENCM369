@@ -60,10 +60,16 @@ void main(void)
     /* System sleep */
     HEARTBEAT_OFF();
     SystemSleep();
-    TimeXus(1000);
+    
+    //(1/1KHz)*(1000us/s) = 1000/256 = 3.906us
+    //rounding up 4us, actual frequency 976.56Hz
+    TimeXus(4); 
+    
     while ( (PIR3 & 0x80) == 0x00)
     {
     }
+    
+    UserAppRun();
     HEARTBEAT_ON();
     
   } /* end while(1) main super loop */

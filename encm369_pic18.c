@@ -84,13 +84,15 @@ Requires:
 Promises:
 - Output pin for PA31_HEARTBEAT is configured
 - RA0-7 configured for digital output, initial value 0x00
+- DAC1 is enabled and configured for output on RA2 between Vss up to Vdd 
 
 */
 void GpioSetup(void)
 {
     ANSELA = 0x00; //Setting up RA0-7 as digital IO
     TRISA = 0x00; //Setting RA0-7 to be outputs
-    LATA  = 0x00; //Setting RA0-7 to be default off/low
+
+    DAC1CON = 0xA0; //Enabling DAC1 output on RA2, Vdd +ref., Vss -ref.
 } /* end GpioSetup() */
 
 
